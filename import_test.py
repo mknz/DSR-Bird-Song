@@ -13,7 +13,7 @@ from sklearn.metrics import accuracy_score, log_loss
 
 from torch.utils.data import DataLoader
 from Datasets.static_dataset import SpectralDataset
-from models.bulbul import Bulbul
+from models.sparrow import Sparrow
 
 ##########################################################################
 # Get df of paths for pickled slices
@@ -73,7 +73,7 @@ print('dataloaders initialized')
 time_axis = ds_test[0][0].shape[2]
 freq_axis = ds_test[0][0].shape[1]
 
-net = Bulbul(time_axis=time_axis, freq_axis=freq_axis, no_classes=CLASSES)
+net = Sparrow(time_axis=time_axis, freq_axis=freq_axis, no_classes=CLASSES)
 
 
 criterion = nn.CrossEntropyLoss()
