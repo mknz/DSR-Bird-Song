@@ -17,7 +17,7 @@ from models.bulbul import Bulbul
 
 ##########################################################################
 # Get df of paths for pickled slices
-df = pd.read_csv('slices_and_labels.csv')
+df = pd.read_csv('slices_and_labels2.csv')
 
 def label_encoder(label_col):
     codes = {}
